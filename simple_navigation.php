@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
-    <script src='one_page.js'></script>
+    <script src='simple_navigation.js'></script>
     <style>
       #a{
           background: black;
@@ -43,25 +43,25 @@
       }
       
       button{
-          color: white
+          color: white;
       }
     </style>
     
     <script>
       $(function(){
-         OnePage.start('section');
+         $.simpleNavigation('section');
       });
     </script>
 </head>
 <body>
     <div id="menu">
-      <button onclick='OnePage.previous()'>Anterior</button>
-      <button onclick='OnePage.next()'>Próximo</button>
+      <button onclick='SimpleNavigation.previous()'>Anterior</button>
+      <button onclick='SimpleNavigation.next()'>Próximo</button>
     </div>
-    <section id='a' data-sn-mode='fade'></section>
-    <section id='b' data-sn-mode='vertical'></section>
+    <section id='a' data-sn data-sn-mode='fade'></section>
+    <section id='b' data-sn data-sn-mode='hide'></section>
     <section id='c' data-sn-mode='fade'></section>
-    <section id='d' data-sn-mode='vertical'></section>
+    <section id='d' data-sn-mode='hide'></section>
     <section id='e' data-sn-mode='fade'></section>
     <section id='f' data-sn-mode='fade'></section>
     
